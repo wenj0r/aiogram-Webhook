@@ -11,11 +11,11 @@ from asyncio import sleep as asleep
 # Загружаем из окружения адрес http тунеля и токен
 load_dotenv()
 TOKEN = getenv('TOKEN')
-NGROK_URL = getenv('NGROK_URL')
+DOMAIN_URL = "https://" + getenv('VERCEL_URL')
 
 # URL будет примерно таким https://25d8-94-19-173-17.ngrok-free.app/bot/6387431111:AAFp8QykDUr1wVwqBvKCOBnUENVEg1oIha4
 WEBHOOK_PATH = f"/bot/{TOKEN}"
-WEBHOOK_URL = f"{NGROK_URL}{WEBHOOK_PATH}"
+WEBHOOK_URL = f"{DOMAIN_URL}{WEBHOOK_PATH}"
 skip_updates = True
 
 app = FastAPI()
