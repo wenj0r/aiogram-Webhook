@@ -1,0 +1,4 @@
+ngrok.exe
+.env
+env/
+__pycache__/
