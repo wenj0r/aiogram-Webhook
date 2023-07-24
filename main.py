@@ -14,7 +14,7 @@ TOKEN = getenv('TOKEN')
 DOMAIN_URL = "https://" + getenv('VERCEL_URL')
 
 # URL будет примерно таким https://telegram-webhook-8e67.vercel.app/bot/6387431111:AAFp8QykDUr1wVwqBvKCOBnUENVEg1oIha4
-WEBHOOK_PATH = f"/bot/{TOKEN}"
+WEBHOOK_PATH = f"/bot"
 WEBHOOK_URL = f"{DOMAIN_URL}{WEBHOOK_PATH}"
 skip_updates = True
 
