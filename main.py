@@ -16,10 +16,9 @@ NGROK_URL = getenv('NGROK_URL')
 # URL будет примерно таким https://25d8-94-19-173-17.ngrok-free.app/bot/6387431111:AAFp8QykDUr1wVwqBvKCOBnUENVEg1oIha4
 WEBHOOK_PATH = f"/bot/{TOKEN}"
 WEBHOOK_URL = f"{NGROK_URL}{WEBHOOK_PATH}"
-skip_updates = True
+SKIP_UPDATES = getenv('SKIP_UPDATES')
 
 app = FastAPI()
-
 
 # Устанавливает WEBHOOK URL при запуске
 @app.on_event("startup")
@@ -30,7 +29,7 @@ async def on_startup():
             url=WEBHOOK_URL
         )
     # Реализация skip_updates
-    if skip_updates:
+    if SKIP_UPDATES:
         await bot.delete_webhook(drop_pending_updates=True)
         sleep(1) # Без задержки приложение ложится
         await asleep(0)
