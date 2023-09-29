@@ -1,5 +1,6 @@
 # telegram-webhook
-Example of Webhook Telegram Bot for developing via Aiogram, FastAPI and ngrok
+A simple example of Webhook Telegram Bot via Aiogram, FastAPI and ngrok.
+Made for study :)
 
 ## Quickstart
 1. Create Virtual Environment
